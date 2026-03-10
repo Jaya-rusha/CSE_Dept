@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science & Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="IIITDMK_logo.png" alt="IITDMK Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/60x60/2563eb/ffffff?text=LOGO'">
+                    <h2><span>CSE</span> Department</h2>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-links">
+                        <a href="#home" class="nav-link">Home</a>
+                        <div class="dropdown">
+                            <a href="about.html" class="nav-link dropdown-toggle">About</a>
+                            <div class="dropdown-content">
+                                <a href="about.html#vision-mission">Vision & Mission</a>
+                                <a href="about.html#department-info">Department Info</a>
+                                <a href="about.html#program-objectives">Program Objectives</a>
+                                <a href="about.html#resources">Resources</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a href="infrastructure.html" class="nav-link dropdown-toggle">Infrastructure</a>
+                            <div class="dropdown-content">
+                                <a href="infrastructure.html#labs">Labs & Facilities</a>
+                                <a href="infrastructure.html#classrooms">Classrooms</a>
+                                <a href="infrastructure.html#maps">Campus Maps</a>
+                            </div>
+                        </div>
+                        <a href="#faculty" class="nav-link">Faculty</a>
+                        <a href="#programs" class="nav-link">Programs</a>
+                        <a href="#research" class="nav-link">Research</a>
+                        <a href="#events" class="nav-link">Events</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Department of Computer Science & Engineering</h1>
+                <h2 class="hero-subtitle">Shaping the Future of Technology</h2>
+                <p class="hero-description">Empowering the next generation of tech innovators and problem solvers</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Explore Programs</button>
+                    <button class="btn btn-secondary">Contact Us</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-animation">
+                    <div class="floating-card">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic Programs</h2>
+                <p class="section-subtitle">Comprehensive Programs for Future Tech Leaders</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>B.Tech CSE</h3>
+                    <p>4-year undergraduate program focusing on fundamental and advanced computer science concepts.</p>
+                    <ul class="program-features">
+                        <li>Core Computer Science</li>
+                        <li>AI & Machine Learning</li>
+                        <li>Industry Internships</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>M.Tech CSE</h3>
+                    <p>2-year postgraduate program with specialization in advanced computing technologies.</p>
+                    <ul class="program-features">
+                        <li>Advanced Algorithms</li>
+                        <li>Research Projects</li>
+                        <li>Industry Collaboration</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Ph.D. Program</h3>
+                    <p>Research-focused doctoral program for cutting-edge research in computer science.</p>
+                    <ul class="program-features">
+                        <li>Research Excellence</li>
+                        <li>Publications</li>
+                        <li>Academic Careers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="faculty">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Faculty</h2>
+                <p class="section-subtitle">Learn from the Best Minds in Computer Science</p>
+            </div>
+            <div class="faculty-grid" id="facultyGrid">
+                <!-- Faculty cards will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Areas</h2>
+                <p class="section-subtitle">Exploring Frontiers in Computer Science</p>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Machine learning, deep learning, natural language processing, and computer vision.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Network security, cryptography, ethical hacking, and digital forensics.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <p>Distributed systems, cloud architecture, and scalable computing solutions.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Big Data Analytics</h3>
+                    <p>Data mining, big data processing, and predictive analytics.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>IoT & Embedded Systems</h3>
+                    <p>Internet of Things, sensor networks, and embedded computing.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>Virtual Reality</h3>
+                    <p>VR/AR development, immersive technologies, and human-computer interaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Stay Updated with Department Activities</p>
+            </div>
+            <div class="events-container">
+                <div class="events-news">
+                    <h3>Latest News</h3>
+                    <div class="news-list" id="newsList">
+                        <!-- News items will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="events-calendar">
+                    <h3>Events Calendar</h3>
+                    <div class="events-list" id="eventsList">
+                        <!-- Events will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd Love to Hear From You</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Computer Science & Engineering Department<br>Your College Name<br>City, State - 123456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hod.cse@college.edu<br>info.cse@college.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSE Department</h3>
+                    <p>Excellence in Computer Science Education and Research</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#research">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Labs</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+                    <p><i class="fas fa-envelope"></i> hod.cse@college.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSE Department. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
