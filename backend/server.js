@@ -8,7 +8,7 @@ const multer = require('multer');
 const fs = require('fs').promises;
 
 const database = require('./config/database');
-const { sessionConfig, requireAdminAuth } = require('./middleware/adminAuth');
+const { sessionConfig, requireAuth, requireAdminAuth } = require('./middleware/adminAuth');
 const { validateContactMessage } = require('./middleware/validation');
 const memoryStore = require('./utils/memoryStore');
 
@@ -409,7 +409,7 @@ app.get('/api/contact', async (req, res, next) => {
 });
 
 // Delete contact message endpoint
-app.delete('/api/contact/:id', async (req, res, next) => {
+app.delete('/api/contact/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let deleted = false;
@@ -432,7 +432,7 @@ app.delete('/api/contact/:id', async (req, res, next) => {
 });
 
 // Delete faculty endpoint
-app.delete('/api/faculty/:id', async (req, res, next) => {
+app.delete('/api/faculty/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let deleted = false;
@@ -477,7 +477,7 @@ app.get('/api/faculty/:id', async (req, res, next) => {
 });
 
 // Update faculty endpoint
-app.put('/api/faculty/:id', async (req, res, next) => {
+app.put('/api/faculty/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let faculty;
@@ -499,7 +499,7 @@ app.put('/api/faculty/:id', async (req, res, next) => {
 });
 
 // Add new faculty endpoint
-app.post('/api/faculty', async (req, res, next) => {
+app.post('/api/faculty', requireAuth, async (req, res, next) => {
     try {
         const data = { ...req.body, is_active: true };
         let faculty;
@@ -517,7 +517,7 @@ app.post('/api/faculty', async (req, res, next) => {
 });
 
 // News CRUD endpoints
-app.post('/api/news', async (req, res, next) => {
+app.post('/api/news', requireAuth, async (req, res, next) => {
     try {
         let news;
         
@@ -554,7 +554,7 @@ app.get('/api/news/:id', async (req, res, next) => {
     }
 });
 
-app.put('/api/news/:id', async (req, res, next) => {
+app.put('/api/news/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let news;
@@ -575,7 +575,7 @@ app.put('/api/news/:id', async (req, res, next) => {
     }
 });
 
-app.delete('/api/news/:id', async (req, res, next) => {
+app.delete('/api/news/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let deleted = false;
@@ -598,7 +598,7 @@ app.delete('/api/news/:id', async (req, res, next) => {
 });
 
 // Events CRUD endpoints
-app.post('/api/events', async (req, res, next) => {
+app.post('/api/events', requireAuth, async (req, res, next) => {
     try {
         let event;
 
@@ -653,7 +653,7 @@ app.get('/api/events/:id', async (req, res, next) => {
     }
 });
 
-app.put('/api/events/:id', async (req, res, next) => {
+app.put('/api/events/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let event;
@@ -674,7 +674,7 @@ app.put('/api/events/:id', async (req, res, next) => {
     }
 });
 
-app.delete('/api/events/:id', async (req, res, next) => {
+app.delete('/api/events/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let deleted = false;
@@ -697,7 +697,7 @@ app.delete('/api/events/:id', async (req, res, next) => {
 });
 
 // Courses CRUD endpoints
-app.post('/api/courses', async (req, res, next) => {
+app.post('/api/courses', requireAuth, async (req, res, next) => {
     try {
         const data = { ...req.body, is_active: true };
         let course;
@@ -735,7 +735,7 @@ app.get('/api/courses/:id', async (req, res, next) => {
     }
 });
 
-app.put('/api/courses/:id', async (req, res, next) => {
+app.put('/api/courses/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let course;
@@ -756,7 +756,7 @@ app.put('/api/courses/:id', async (req, res, next) => {
     }
 });
 
-app.delete('/api/courses/:id', async (req, res, next) => {
+app.delete('/api/courses/:id', requireAuth, async (req, res, next) => {
     try {
         const { id } = req.params;
         let deleted = false;

@@ -53,8 +53,8 @@ class MemoryStore {
 
         // Seed at least one admin so the admin UI works without MongoDB.
         // Uses env vars if provided, otherwise defaults from the legacy credentials.
-        const username = (process.env.ADMIN_USERNAME || 'admin').toLowerCase();
-        const passwordPlain = process.env.ADMIN_PASSWORD || 'cseadmin123';
+        const username = (process.env.ADMIN_USER || 'admin').toLowerCase();
+        const passwordPlain = process.env.ADMIN_PASS || 'cseadmin123';
         const password = await bcrypt.hash(passwordPlain, 10);
 
         this.collections.admins = [

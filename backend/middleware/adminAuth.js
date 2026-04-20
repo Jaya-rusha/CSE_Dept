@@ -1,9 +1,9 @@
 const session = require('express-session');
 
-// Legacy admin credentials (kept for backward compatibility)
+// Admin credentials from environment variables
 const ADMIN_CREDENTIALS = {
-    username: process.env.ADMIN_USERNAME || 'admin',
-    password: process.env.ADMIN_PASSWORD || 'cseadmin123'
+    username: process.env.ADMIN_USER || 'admin',
+    password: process.env.ADMIN_PASS || 'cseadmin123'
 };
 
 // Session configuration

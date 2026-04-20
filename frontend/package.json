@@ -1,0 +1,26 @@
+{
+  "name": "cse-department-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for CSE Department Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3001 -c-1",
+    "dev": "npx http-server . -p 3001 -c-1 -o",
+    "build": "echo 'No build process needed for static files'",
+    "serve": "npx http-server . -p 3001 -c-1"
+  },
+  "keywords": [
+    "frontend",
+    "website",
+    "cse-department",
+    "static-site"
+  ],
+  "author": "CSE Department",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
